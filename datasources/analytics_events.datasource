@@ -12,7 +12,7 @@ SCHEMA >
 
 ENGINE "MergeTree"
 ENGINE_PARTITION_KEY "toYYYYMM(timestamp)"
-ENGINE_SORTING_KEY "timestamp, version"
+ENGINE_SORTING_KEY "timestamp, version, action"
 ENGINE_TTL "timestamp + toIntervalDay(60)"
 
 TAGS "backfill_column=timestamp"
